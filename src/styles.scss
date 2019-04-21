@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'assets/css/vivify.min.css';
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+  margin: 0;
+}
+
+.mat-dialog-container {
+  max-width: 100% !important;
+}
+
+.bg-color1 {
+  background: #ff4444 !important;
+}
+
+.bg-color2 {
+  background: #CC0000 !important;
+}
+
+.bg-color3 {
+  background: #ffbb33 !important;
+}
+
+.bg-color4 {
+  background: #FF8800 !important;
+}
+
+.bg-color5 {
+  background: #00C851 !important;
+}
+
+.bg-color6 {
+  background: #007E33 !important;
+}
+
+.bg-color7 {
+  background: #33b5e5 !important;
+}
+
+.bg-color8 {
+  background: #0099CC !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rotate90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rotate270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}

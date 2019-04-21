@@ -1,0 +1,6 @@
+<div *ngIf="isOpen" (click)="onCloseModal()">
+  <div (click)="$event.stopPropagation()">
+    <div #target >
+    </div>
+  </div>
+</div>

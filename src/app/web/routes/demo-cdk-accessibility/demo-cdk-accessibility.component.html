@@ -1,0 +1,46 @@
+<h1>Accessibility 테스트</h1>
+<ol>
+  <li>accessibility을 이용한 포커스 이벤트 연습... 인풋에 포커스가 생기면 드롭다운이 표시됩니다.</li>
+  <li>드롭다운을 클릭해도 포커스를 잃지 않습니다.</li>
+  <li>드롭다운과 인풋 외에 부분을 클릭하면 포커스를 잃습니다.</li>
+</ol>
+
+<div class="example-focus-monitor">
+  <button #element>Focus Monitored Element ({{elementOrigin}})</button>
+</div>
+
+<div class="example-focus-monitor">
+  <div #subtree>
+    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>
+    <button>Child Button 1</button>
+    <button>Child Button 2</button>
+  </div>
+</div>
+
+<div class="example-focus-monitor">
+  <button cdkMonitorElementFocus
+          (cdkFocusChange)="elementOrigin = formatOrigin($event); markForCheck()">
+    Focus Monitored Element ({{elementOrigin}})
+  </button>
+</div>
+
+<div class="example-focus-monitor">
+  <div tabindex="0" cdkMonitorSubtreeFocus
+       (cdkFocusChange)="subtreeOrigin = formatOrigin($event); markForCheck()">
+    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>
+    <button>Child Button 1</button>
+    <button>Child Button 2</button>
+    <div>ho!</div>
+  </div>
+</div>
+<div>how!!</div>
+
+<div class="hoho" tabindex="1" (focus)="focusElement.isShow = true" #focusElement (focusout)="focusElement.isShow = false">
+  <input type="text" (focus)="focusElement.isShow = true" #focusElement (focusout)="focusElement.isShow = false">
+  <app-accessibility-dropdown *ngIf="focusElement.isShow === true">
+  </app-accessibility-dropdown>
+</div>
+
+
+
+<h3>결론... accessibility를 쓸 필요가 없다.</h3>

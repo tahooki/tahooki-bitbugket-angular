@@ -1,0 +1,13 @@
+:host {
+  overflow-y: auto;
+}
+.page-list {
+  margin: 20px;
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+app-root {
+  max-width: 1100px !important;
+}

@@ -1,0 +1,27 @@
+<p>
+  demo-animation works!
+</p>
+
+<app-demo-animation001 *ngIf="isShow">
+</app-demo-animation001>
+
+<button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect (click)="onClickToggle()">toggle</button>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <div class="ani-list" #aniListElement>
+        <ng-template ngFor [ngForOf]="array" let-item>
+          <div class="ani-item">
+            <app-demo-animation002
+            [listRect]="aniListElement.getBoundingClientRect()">
+            </app-demo-animation002>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

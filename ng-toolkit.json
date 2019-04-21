@@ -1,0 +1,18 @@
+{
+  "serverless": {
+    "provider": "firebase",
+    "firebaseProject": "tahooki-test",
+    "skipInstall": true,
+    "directory": ".",
+    "project": "angular",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  },
+  "universal": {
+    "skipInstall": false,
+    "directory": ".",
+    "project": "angular"
+  }
+}
